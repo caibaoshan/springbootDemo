@@ -28,4 +28,14 @@ public class controller {
 	public User get(@PathVariable int id){
 		return userMapper.gitUser(id);
 	}
+
+	@RequestMapping("del/{id}")
+	public String deleteUser(@PathVariable int id ){
+		try {
+			userMapper.deleteUser(id);
+		}catch(Exception e){
+			return "error";
+		}
+		return "success";
+	}
 }
