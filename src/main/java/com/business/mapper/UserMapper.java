@@ -1,9 +1,10 @@
 package com.business.mapper;
 
 import com.business.model.User;
+import org.springframework.stereotype.Repository;
 
 public interface UserMapper {
-    public User gitUser(int id);
+    User gitUser(int id);
 
-    public void deleteUser(int id);
+    void deleteUser(int id);
 }
